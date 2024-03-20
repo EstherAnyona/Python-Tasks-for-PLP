@@ -1,0 +1,23 @@
+def generate_fibonacci_sequence(n):
+    fibonacci_sequence = [0, 1] #this initializes with the first two terms
+
+    #next step is to generate the Fibonacci sequence up to n terms
+    for i in range(2, n):
+        next_term = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+        fibonacci_sequence.append(next_term)
+
+        return fibonacci_sequence
+    
+    def main():
+        #This asks the user to input the value of n
+        n = int(input("Enter the number of terms for the Fibonacci sequence: "))
+
+        #this generates the Fibonacci sequence
+        fibonacci_sequence = generate_fibonacci_sequence(n)
+
+        #this prints the generated Fibonacci sequence
+        print("Fibonacci Sequence up to term", n, ":", fibonacci_sequence)
+
+
+    if __name__ == "__main__":
+        main()
